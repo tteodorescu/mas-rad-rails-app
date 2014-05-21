@@ -13,3 +13,11 @@
 - $ bundle install
 - $ rake db:create db:migrate
 - $ rails s
+
+## Update your fork
+
+- https://help.github.com/articles/syncing-a-fork
+- $ git remote add upstream https://github.com/thibaudgg/thibaudgg/mas-rad-rails-app.git
+- $ git fetch upstream
+- $ git checkout master # or any branch
+- $ git merge upstream/master
