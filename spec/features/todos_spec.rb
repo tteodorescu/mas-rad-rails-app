@@ -55,7 +55,7 @@ feature 'Todos' do
 
       click_button('mark as completed')
 
-      expect(page).to have_content 'mark as active'
+      expect(page).to have_selector('input[value="mark as active"]')
     end
   end
 
@@ -69,7 +69,7 @@ feature 'Todos' do
 
       click_button('mark as active')
 
-      expect(page).to have_content 'mark as completed'
+      expect(page).to have_selector('input[value="mark as completed"]')
     end
   end
 end
