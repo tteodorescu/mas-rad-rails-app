@@ -44,4 +44,32 @@ feature 'Todos' do
       expect(page).not_to have_content 'to do'
     end
   end
+
+  context 'with one active todo' do
+    before(:each) do
+      Todo.create(title: 'to do', completed: false)
+    end
+
+    it 'completes the todo with one click' do
+      visit '/'
+
+      click_button('mark as completed')
+
+      expect(page).to have_content 'mark as active'
+    end
+  end
+
+  context 'with one completed todo' do
+    before(:each) do
+      Todo.create(title: 'done', completed: true)
+    end
+
+    it 'actives the todo with one click' do
+      visit '/'
+
+      click_button('mark as active')
+
+      expect(page).to have_content 'mark as completed'
+    end
+  end
 end
