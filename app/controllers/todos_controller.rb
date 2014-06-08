@@ -5,6 +5,9 @@ class TodosController < ApplicationController
   # GET /todos.json
   def index
     @todos = Todo.all
+    
+    @todos = @todos.send(params[:scope]) if params[:scope]
+  
     @todo = Todo.new
   end
 

@@ -26,4 +26,6 @@
 
 <br>
 
-<%= link_to 'New Todo', new_todo_path %>
+<%= link_to 'All', root_path %>
+<%= link_to 'Completed', scoped_todos_path('completed') %>
+<%= link_to 'Active', scoped_todos_path('active') %>

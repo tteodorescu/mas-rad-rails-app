@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   root to: 'todos#index'
-  
-  resources :todos
 
+  get '/:scope' => 'todos#index', constraints: { scope: /active|completed/ }, as: :scoped_todos 
+  resources :todos
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
