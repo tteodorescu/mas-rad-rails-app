@@ -17,12 +17,10 @@ feature 'Todos' do
       Todo.create(title: 'done', completed: true)
     end
 
-    it 'has counter on all filtering links' do
+    it 'has item left counter on index page' do
       visit '/'
 
-      expect(page).to have_content 'All (2)'
-      expect(page).to have_content 'Active (1)'
-      expect(page).to have_content 'Completed (1)'
+      expect(page).to have_content '1 item(s) left'
     end
 
     it 'has tr.completed class on completed todo' do
