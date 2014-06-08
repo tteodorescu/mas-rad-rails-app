@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Todo.create(title: 'Revise for exam 1', completed: true)
+Todo.create(title: 'Revise for exam 2', completed: true)
+Todo.create(title: 'Choose a framework for module project', completed: false)
+Todo.create(title: 'Create a Pull Request for exam 2', completed: false)
