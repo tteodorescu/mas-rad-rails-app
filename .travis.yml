@@ -6,3 +6,7 @@ addons:
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
+deploy:
+  provider: heroku
+  api_key:
+    secure: M5rpIi8JejSXXrusU2gG5Uu/Xgt8JtRReTVosCx+M7rFa2ctwKP6+HODMruvVssW9hbo4a3+K4w9SFT5DJKj0+OTGkdNcBAZRLSC1LKStQbsK+VTS2JVtLZyKUW+iB3ergIqzFMf8ICdGZxc3wVZdzf8FozZYGv6TN/WnWw8J9Y=
